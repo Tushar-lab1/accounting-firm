@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Contact.module.css";
 
-const FIRM_EMAIL = "callsignspin52@gmail.com";
+const FIRM_EMAIL = "compliancebajajassociates@gmail.com";
 
 const SERVICE_OPTIONS = [
   "ITR Filing",
@@ -110,7 +110,7 @@ export default function Contact() {
           <form className={styles.form} onSubmit={handleSubmit} noValidate>
             <h3 className={styles.formTitle}>Send us a Message</h3>
             <p className={styles.formNote}>
-              Submitting this form will open your email client with a pre-filled
+              Submitting this form will open your email with a pre-filled
               message.
             </p>
 
@@ -148,7 +148,7 @@ export default function Contact() {
             <div className={styles.row}>
               <div className={styles.field}>
                 <label className={styles.label} htmlFor="phone">
-                  Phone Number
+                  Phone Number *
                 </label>
                 <input
                   id="phone"
@@ -157,6 +157,7 @@ export default function Contact() {
                   placeholder="+91 XXXXX XXXXX"
                   value={form.phone}
                   onChange={set("phone")}
+                  required
                 />
               </div>
               <div className={styles.field}>
@@ -181,7 +182,7 @@ export default function Contact() {
 
             <div className={styles.field}>
               <label className={styles.label} htmlFor="message">
-                Message *
+                Message
               </label>
               <textarea
                 id="message"
@@ -190,7 +191,6 @@ export default function Contact() {
                 placeholder="Briefly describe your requirement or question…"
                 value={form.message}
                 onChange={set("message")}
-                required
               />
             </div>
 
